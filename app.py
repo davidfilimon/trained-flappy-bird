@@ -97,7 +97,7 @@ optimizer = optim.Adam(policy_net.parameters(), lr=LEARNING_RATE)
 memory = ReplayBuffer(MEMORY_SIZE)
 
 if os.path.exists(SAVE_PATH):
-    print(f"S-a găsit un checkpoint: {SAVE_PATH}. Se încarcă...")
+    print(f"Checkpoint found: {SAVE_PATH}. Loading...")
     policy_net.load_state_dict(torch.load(SAVE_PATH))
     target_net.load_state_dict(policy_net.state_dict())
 else:

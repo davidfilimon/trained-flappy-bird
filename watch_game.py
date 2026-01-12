@@ -81,7 +81,7 @@ def main():
         total_reward = 0
         done = False
 
-        print(f"Începe Episodul {episode + 1}...")
+        print(f"Start episode: {episode + 1}...")
 
         while not done:
             img_to_show = env.render()
@@ -104,7 +104,7 @@ def main():
                 done = True
                 episode = 5
 
-        print(f"Scor Episod {episode + 1}: {total_reward:.2f}")
+        print(f"Episode {episode + 1} score: {total_reward:.2f}")
         time.sleep(1)
 
     cv2.destroyAllWindows()
